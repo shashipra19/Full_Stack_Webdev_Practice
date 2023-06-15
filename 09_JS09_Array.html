@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Array</title>
+  </head>
+  <body>
+      <h1>JS Array</h1>
+      <br/>
+      <input class="btn" type="button" value="Click Here" onclick="test();" />
+      <br/>
+    <script>
+      function test() {
+        var friends=["Shashi","Rohit","Shiv","Shubham","Sudheer"];
+        document.write(friends.length+"   ");
+        var check =friends.includes(prompt("Enter Here Name:"));
+
+        if(check){
+            document.write("Present in Friend List");
+        }
+        else{
+            document.write("Absent in Friend List");
+        }
+      }
+    </script>
+  </body>
+</html>

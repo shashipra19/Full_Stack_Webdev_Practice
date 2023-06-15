@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Array Fizz Buzz</title>
+  </head>
+  <body>
+    <h1>JS Array Fizz Buzz</h1>
+    
+    <br />
+      <input class="btn" type="button" value="Click Here" onclick="FizzBuzz();" />
+    <br />
+    <p id="demo"></p>
+     
+    <script>
+        var output = [];
+        var count = 1;
+      function FizzBuzz() {
+        var n=prompt("Enter the max no. till print count:");
+        while(count<=n){
+          if (count % 3 === 0 && count % 5 === 0) {
+            output.push("FizzBuzz");
+          } else if (count % 3 === 0) {
+            output.push("Fizz");
+          } else if (count % 5 === 0) {
+            output.push("Buzz");
+          } else {
+            output.push(count);
+          }
+          count++;
+        }
+          document.getElementById("demo").innerHTML=output;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS BMI Calculator</title>
+</head>
+<body>
+    <center>
+    <h1>BMI Calculator</h1>
+    <form action="">
+    <input type="text" name="weight" id="weight" placeholder="Enter your Weight in Kg">
+    <input type="text" name="height" id="height" placeholder="Enter your Height in cm">
+    <input type="button" value="Check BMI" onclick="test();">
+    <input type="reset" value="Reset">
+    <br><br>
+    <p id="demo" style="font-size: 20px;"></p>
+    </form>
+    
+    </center>
+    
+    <script>
+        function BMI(weight,height){
+        var num=weight;
+        var den=height*height;
+        return num/den;
+        }
+        function test(){
+            // var weight=prompt("Enter your weight in Kg :");
+            // var height=prompt("Enter your height in cm :");
+            var weight=document.getElementById("weight").value;
+            var height=document.getElementById("height").value;
+            var bmi=BMI(weight,height/100);
+            if(bmi<18.5){
+                // alert("You are UnderWeight");
+                document.getElementById("demo").innerHTML=("BMI is :"+bmi+ ",  UnderWeight");
+            }
+            else if(bmi <= 24.9){
+                // alert("You are HelthyWeight");
+                document.getElementById("demo").innerHTML=("BMI is :"+bmi+ ", HealthyWeight");
+            }
+            else{
+                // alert("You are OverWeight");
+                document.getElementById("demo").innerHTML=("BMI is :"+bmi+ ",  OverWeight");
+            }
+            
+
+        // alert("You have weight "+weight+",Kg height "+height+"cm and Your BMI will be "+bmi);
+        // document.getElementById("demo").innerHTML=bmi;
+        // console.log("You have weight "+weight+",Kg height "+height+"cm and Your BMI will be "+bmi);
+        // document.write("You have weight "+weight+",Kg height "+height+"cm and Your BMI will be "+bmi);
+        }
+    </script>
+</body>
+</html>

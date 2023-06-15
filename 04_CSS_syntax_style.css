@@ -1,0 +1,26 @@
+/***************************************TAG SELECTORS**********************************/
+h1{
+    color:goldenrod;
+}
+body{
+    background-color:antiquewhite;
+}
+img{
+    height: 200px;
+    width: 300px;
+    background-color: rgb(255, 235, 120);
+}
+img:hover{
+    background-color: aqua;
+}
+
+/************************************CLASSes SELECTORS**********************************/
+.vegitable{
+    background-color: lightgreen;
+}
+
+/************************************IDs SELECTORS**********************************/
+
+#para3{
+    color: goldenrod;
+}

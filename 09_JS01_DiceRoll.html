@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Dice Roll</title>
+    <style>
+      .container {
+        text-align: center;
+        
+      }
+      .btn {
+        width: 140px;
+        border: 0;
+        padding: 12px 10px;
+        color: blanchedalmond;
+        outline: none;
+        font-size: larger;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(to right, #2ac6ff, #0189ff);
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      #demo {
+        font-size: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dice Roll</h1>
+      <br />
+      <input class="btn" type="button" value="Roll Dice" onclick="test();" />
+      <br />
+      <p id="demo"></p>
+    </div>
+    <script>
+      function test() {
+        var n = Math.random();
+        n = n * 6;
+        n = Math.floor(n) + 1;
+        // alert("Dice Roll : "+ n);
+        document.getElementById("demo").innerHTML = n;
+      }
+    </script>
+  </body>
+</html>

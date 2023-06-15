@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Milk Bottle</title>
+</head>
+<body>
+    <h1>Milk Bottle</h1>
+    <input type="button" value="Click Me" onclick="test();">
+    <script>
+        function getMilk(money){
+        var moneyLeft=money%60;
+        var bottle=(money/60)-(moneyLeft/60);
+        alert("No. of bottle in money : Rs"+money+", is : "+bottle+" remaing money is : Rs"+moneyLeft);
+        console.log("No. of bottle in money : Rs"+money+", is : "+bottle+" remaing money is : Rs"+moneyLeft);
+        document.write("No. of bottle in money : Rs"+money+", is : "+bottle+" remaing money is : Rs"+moneyLeft);
+        }
+        function test(){
+            var money=prompt("Enter the cost to get Milk : ");
+            getMilk(money);
+        }
+
+
+    </script>
+</body>
+</html>
